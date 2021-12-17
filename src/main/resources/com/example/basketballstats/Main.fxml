@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="990.0" prefWidth="1346.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.basketballstats.Controller">
+   <children>
+      <VBox alignment="CENTER" layoutX="180.0" layoutY="843.0" prefHeight="95.0" prefWidth="57.0" spacing="17.0">
+         <children>
+            <Label fx:id="lName" text="Name" />
+            <Label text="Surname" />
+            <Label text="Number" />
+         </children>
+      </VBox>
+      <VBox layoutX="241.0" layoutY="844.0" prefHeight="81.0" prefWidth="130.0" spacing="10.0">
+         <children>
+            <TextField fx:id="tfName">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <TextField fx:id="tfSurname">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <TextField fx:id="tfNumber" prefHeight="25.0" prefWidth="27.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+         </children>
+      </VBox>
+      <TableView fx:id="tvBoxScore" layoutX="16.0" layoutY="125.0" prefHeight="350.0" prefWidth="660.0" scaleY="1.5">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="colSurname" prefWidth="75.0" text="Surname" />
+            <TableColumn fx:id="colNumber" prefWidth="51.0" text="Number" />
+            <TableColumn fx:id="colPoints" prefWidth="42.0" text="PTS" />
+            <TableColumn fx:id="colRebounds" prefWidth="38.0" text="REB" />
+            <TableColumn fx:id="colAssists" prefWidth="38.0" text="AST" />
+            <TableColumn fx:id="colSteals" prefWidth="38.0" text="STL" />
+            <TableColumn fx:id="colBlocks" prefWidth="38.0" text="BLK" />
+            <TableColumn fx:id="colMissTwo" prefWidth="38.0" text="M2" />
+            <TableColumn fx:id="colMissThree" prefWidth="38.0" text="M3" />
+            <TableColumn fx:id="colMissOne" prefWidth="38.0" text="M1" />
+            <TableColumn fx:id="colTurnovers" prefWidth="38.0" text="T" />
+            <TableColumn fx:id="colMadeOne" prefWidth="38.0" text="1" />
+            <TableColumn fx:id="colMadeTwo" prefWidth="38.0" text="2" />
+            <TableColumn fx:id="colMadeThree" prefWidth="38.0" text="3" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnInsert" layoutX="31.0" layoutY="575.0" mnemonicParsing="false" onAction="#insertButton" prefHeight="68.0" prefWidth="95.0" text="Add Home&#10;Player" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnDelete" layoutX="31.0" layoutY="735.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="68.0" prefWidth="95.0" text="Delete Home&#10;Player" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnUpdate" layoutX="480.0" layoutY="883.0" mnemonicParsing="false" onAction="#updateButton" prefHeight="68.0" prefWidth="150.0" text="Update Home Player">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnSave" layoutX="31.0" layoutY="655.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="68.0" prefWidth="95.0" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="330.0" layoutY="21.0" text="Home Team" />
+      <TableView fx:id="tvBoxScoreAway" layoutX="686.0" layoutY="125.0" prefHeight="350.0" prefWidth="660.0" scaleY="1.5">
+         <columns>
+            <TableColumn fx:id="colNameAway" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colSurnameAway" prefWidth="75.0" text="Surname" />
+            <TableColumn fx:id="colNumberAway" prefWidth="51.0" text="Number" />
+            <TableColumn fx:id="colPointsAway" prefWidth="42.0" text="PTS" />
+            <TableColumn fx:id="colReboundsAway" prefWidth="38.0" text="REB" />
+            <TableColumn fx:id="colAssistsAway" prefWidth="38.0" text="AST" />
+            <TableColumn fx:id="colStealsAway" prefWidth="38.0" text="STL" />
+            <TableColumn fx:id="colBlocksAway" prefWidth="38.0" text="BLK" />
+            <TableColumn fx:id="colMissTwoAway" prefWidth="38.0" text="M2" />
+            <TableColumn fx:id="colMissThreeAway" prefWidth="38.0" text="M3" />
+            <TableColumn fx:id="colMissOneAway" prefWidth="38.0" text="M1" />
+            <TableColumn fx:id="colTurnoversAway" prefWidth="38.0" text="T" />
+            <TableColumn fx:id="colMadeOneAway" prefWidth="38.0" text="1" />
+            <TableColumn fx:id="colMadeTwoAway" prefWidth="38.0" text="2" />
+            <TableColumn fx:id="colMadeThreeAway" prefWidth="38.0" text="3" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnInsertAway" layoutX="1237.0" layoutY="575.0" mnemonicParsing="false" onAction="#insertButtonAway" prefHeight="68.0" prefWidth="95.0" text="Add Away&#10;Player" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="1006.0" layoutY="21.0" text="Away Team" />
+      <Button fx:id="btnSaveAway" layoutX="1237.0" layoutY="655.0" mnemonicParsing="false" onAction="#saveButtonAway" prefHeight="68.0" prefWidth="95.0" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnUpdateAway" layoutX="795.0" layoutY="883.0" mnemonicParsing="false" onAction="#updateButtonAway" prefHeight="68.0" prefWidth="150.0" text="Update Away Player">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnDeleteAway" layoutX="1237.0" layoutY="735.0" mnemonicParsing="false" onAction="#deleteButtonAway" prefHeight="68.0" prefWidth="95.0" text="Delete Away&#10;Player" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPlusMadeOne" layoutX="902.0" layoutY="590.0" mnemonicParsing="false" onAction="#plusMadeOnePoint" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusMadeOne" layoutX="1032.0" layoutY="590.0" mnemonicParsing="false" onAction="#minusMadeOnePoint" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnImport" layoutX="31.0" layoutY="815.0" mnemonicParsing="false" onAction="#importPlayers" prefHeight="68.0" prefWidth="95.0" text="Import Home&#10;Save" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnImportAway" layoutX="1237.0" layoutY="815.0" mnemonicParsing="false" onAction="#importPlayersAway" prefHeight="68.0" prefWidth="95.0" text="Import Away&#10;Save" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPlusMadeTwo" layoutX="902.0" layoutY="670.0" mnemonicParsing="false" onAction="#plusMadeTwoPoints" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusMadeTwo" layoutX="1032.0" layoutY="670.0" mnemonicParsing="false" onAction="#minusMadeTwoPoints" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPlusMadeThree" layoutX="902.0" layoutY="760.0" mnemonicParsing="false" onAction="#plusMadeThreePoints" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusMadeThree" layoutX="1032.0" layoutY="760.0" mnemonicParsing="false" onAction="#minusMadeThreePoints" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="tfMadeThree" alignment="CENTER" editable="false" layoutX="953.0" layoutY="770.0" prefHeight="25.0" prefWidth="77.0" promptText="Made for 3" />
+      <TextField fx:id="tfMadeTwo" alignment="CENTER" editable="false" layoutX="951.0" layoutY="680.0" prefHeight="25.0" prefWidth="77.0" promptText="Made for 2" />
+      <TextField fx:id="tfMadeOne" alignment="CENTER" editable="false" layoutX="951.0" layoutY="602.0" prefHeight="25.0" prefWidth="77.0" promptText="Made for 1" />
+      <Label layoutX="972.0" layoutY="582.0" text="Made 1" />
+      <Label layoutX="969.0" layoutY="660.0" text="Made 2" />
+      <Label layoutX="971.0" layoutY="752.0" text="Made 3" />
+      <TextField fx:id="tfMissOne" alignment="CENTER" editable="false" layoutX="701.0" layoutY="606.0" prefHeight="25.0" prefWidth="77.0" promptText="Miss for 1" />
+      <TextField fx:id="tfMissTwo" alignment="CENTER" editable="false" layoutX="701.0" layoutY="684.0" prefHeight="25.0" prefWidth="77.0" promptText="Miss for 2" />
+      <TextField fx:id="tfMissThree" alignment="CENTER" editable="false" layoutX="702.0" layoutY="774.0" prefHeight="25.0" prefWidth="77.0" promptText="Miss for 3" />
+      <TextField fx:id="tfTurnovers" alignment="CENTER" editable="false" layoutX="460.0" layoutY="774.0" prefHeight="25.0" prefWidth="77.0" promptText="Turnovers" />
+      <Button fx:id="btnPlusMissOne" layoutX="653.0" layoutY="594.0" mnemonicParsing="false" onAction="#btnPlusMissOnePoint" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusMissOne" layoutX="781.0" layoutY="594.0" mnemonicParsing="false" onAction="#btnMinusMissOnePoint" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPlusMissTwo" layoutX="653.0" layoutY="674.0" mnemonicParsing="false" onAction="#btnPlusMissTwoPoints" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusMissTwo" layoutX="781.0" layoutY="674.0" mnemonicParsing="false" onAction="#minusMissTwoPoints" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPlusMissThree" layoutX="653.0" layoutY="764.0" mnemonicParsing="false" onAction="#plusMissThreePoints" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusMissThree" layoutX="781.0" layoutY="764.0" mnemonicParsing="false" onAction="#minusMissThreePoints" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPlusTurnover" layoutX="411.0" layoutY="764.0" mnemonicParsing="false" onAction="#plusTurnover" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusTurnover" layoutX="542.0" layoutY="764.0" mnemonicParsing="false" onAction="#minusTurnover" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="tfPoints" alignment="CENTER" editable="false" layoutX="226.0" layoutY="606.0" prefHeight="25.0" prefWidth="77.0" promptText="Points" />
+      <TextField fx:id="tfRebounds" alignment="CENTER" editable="false" layoutX="226.0" layoutY="684.0" prefHeight="25.0" prefWidth="77.0" promptText="Rebounds" />
+      <TextField fx:id="tfAssists" alignment="CENTER" editable="false" layoutX="226.0" layoutY="774.0" prefHeight="25.0" prefWidth="77.0" promptText="Assists" />
+      <TextField fx:id="tfSteals" alignment="CENTER" editable="false" layoutX="460.0" layoutY="606.0" prefHeight="25.0" prefWidth="77.0" promptText="Steals" />
+      <TextField fx:id="tfBlocks" alignment="CENTER" editable="false" layoutX="460.0" layoutY="684.0" prefHeight="25.0" prefWidth="77.0" promptText="Blocks" />
+      <Button fx:id="btnPlusPoint" layoutX="177.0" layoutY="594.0" mnemonicParsing="false" onAction="#plusPoint" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusPoint" layoutX="308.0" layoutY="594.0" mnemonicParsing="false" onAction="#minusPoint" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPlusRebound" layoutX="177.0" layoutY="674.0" mnemonicParsing="false" onAction="#plusRebound" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusRebound" layoutX="308.0" layoutY="674.0" mnemonicParsing="false" onAction="#minusRebound" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPlusAssist" layoutX="177.0" layoutY="764.0" mnemonicParsing="false" onAction="#plusAssist" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPlusSteal" layoutX="411.0" layoutY="594.0" mnemonicParsing="false" onAction="#plusSteal" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPlusBlock" layoutX="411.0" layoutY="674.0" mnemonicParsing="false" onAction="#plusBlock" prefHeight="45.0" prefWidth="45.0" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusAssist" layoutX="308.0" layoutY="764.0" mnemonicParsing="false" onAction="#minusAssist" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusSteal" layoutX="542.0" layoutY="594.0" mnemonicParsing="false" onAction="#minusSteal" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMinusBlock" layoutX="542.0" layoutY="674.0" mnemonicParsing="false" onAction="#minusBlock" prefHeight="45.0" prefWidth="45.0" text="-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="706.0" layoutY="586.0" text="1 Attempted" />
+      <Label layoutX="706.0" layoutY="662.0" text="2 Attempted" />
+      <Label layoutX="706.0" layoutY="752.0" text="3 Attempted" />
+      <Label layoutX="491.0" layoutY="755.0" text="TO" />
+      <Label layoutX="253.0" layoutY="585.0" text="PTS" />
+      <Label layoutX="253.0" layoutY="662.0" text="REB" />
+      <Label layoutX="254.0" layoutY="755.0" text="AST" />
+      <Label layoutX="491.0" layoutY="585.0" text="STL" />
+      <Label layoutX="490.0" layoutY="662.0" text="BLK" />
+      <Button fx:id="btnReboundWithMadeTwo" layoutX="1120.0" layoutY="625.0" mnemonicParsing="false" onAction="#addReboundWithMadeTwo" prefHeight="60.0" prefWidth="65.0" text="Z + 2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnReboundWithMissTwo" layoutX="1120.0" layoutY="715.0" mnemonicParsing="false" onAction="#addReboundWithMissTwo" prefHeight="60.0" prefWidth="65.0" text="Z + M2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="tfThreePointP" editable="false" layoutX="1120.0" layoutY="926.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="tfFieldGoalP" editable="false" layoutX="1120.0" layoutY="874.0" prefHeight="25.0" prefWidth="57.0" />
+      <Label layoutX="1136.0" layoutY="854.0" text="FG%" />
+      <Label layoutX="1136.0" layoutY="906.0" text="3PT%" />
+      <TextField fx:id="tfFreeThrowP" editable="false" layoutX="1120.0" layoutY="825.0" prefHeight="25.0" prefWidth="57.0" />
+      <Label layoutX="1136.0" layoutY="805.0" text="FT%" />
+      <RadioButton fx:id="rbEditModeOn" layoutX="265.0" layoutY="951.0" mnemonicParsing="false" onAction="#turnEditModeOn" text="Edit Mode ON" />
+      <RadioButton fx:id="rbEditModeOff" layoutX="154.0" layoutY="953.0" mnemonicParsing="false" onAction="#turnEditModeOff" text="Edit Mode OFF" />
+   </children>
+</AnchorPane>
